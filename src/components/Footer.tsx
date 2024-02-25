@@ -9,7 +9,7 @@ const links = [
   },
   {
     title: "LinkedIn",
-    href: "https://www.linkedin.com/in/dissurender/",
+    href: "https://www.linkedin.com/in/rhyn-ogg/",
     referrer: "noreferrer noopener _blank",
   },
 ];
