@@ -10,7 +10,7 @@ interface ButtonProps {
 
 const MyButton: React.FC<ButtonProps> = (props) => {
   const handleClick = () => {
-    window.open(props.url, "_blank");
+    window.open(props.url, "_blank noreferrer noopener");
   };
 
   return (

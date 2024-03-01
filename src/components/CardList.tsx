@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Card from "./Card";
 
 interface CardData {
@@ -12,7 +12,7 @@ interface CardData {
   kids: number[];
 }
 
-const CardList: FC<CardData> = () => {
+const CardList = () => {
   const [cards, setCards] = useState([]);
 
   // fetch data from API and set it to the cards state
@@ -28,13 +28,15 @@ const CardList: FC<CardData> = () => {
   return (
     <div>
       {cards.map((card: CardData) => {
-        return ( card.title &&
-          <Card
-            key={card.id}
-            title={card.title}
-            body={card.by}
-            url={card.url}
-          />
+        return (
+          card.title && (
+            <Card
+              key={card.id}
+              title={card.title}
+              body={card.by}
+              url={card.url}
+            />
+          )
         );
       })}
     </div>

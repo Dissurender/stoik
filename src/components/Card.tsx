@@ -5,7 +5,7 @@ import MyButton from "./Button";
 interface CardProps {
   title: string;
   body?: string | React.ReactNode;
-  url?: React.ReactNode;
+  url?: string;
 }
 
 const Card: React.FC<CardProps> = (props) => {
@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = (props) => {
         padding: "1rem",
         backgroundColor: "#f5f5f5",
         borderRadius: "1rem",
-        boxShadow: "0 0 5px 0 #000000",
+        boxShadow: "0 0 5px 0 grey",
       }}
     >
       <CardContent>
@@ -32,12 +32,7 @@ const Card: React.FC<CardProps> = (props) => {
             marginTop: "1rem",
           }}
         >
-          <MyButton
-            text="Read More"
-            url={props.url}
-            target="_blank"
-            rel="noreferrer noopener"
-          />
+          <MyButton text="Read More" url={props.url} />
         </Container>
       </CardContent>
     </Container>
