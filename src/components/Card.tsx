@@ -1,10 +1,11 @@
 import { CardContent, Container, Typography } from "@mui/material";
 import React from "react";
+import MyButton from "./Button";
 
 interface CardProps {
   title: string;
   body?: string | React.ReactNode;
-  button?: React.ReactNode;
+  url?: React.ReactNode;
 }
 
 const Card: React.FC<CardProps> = (props) => {
@@ -12,17 +13,18 @@ const Card: React.FC<CardProps> = (props) => {
     <Container
       sx={{
         height: "fit-content",
-        width: "20rem",
+        width: "30rem",
+        margin: "1rem auto",
         outline: "1px solid black",
         padding: "1rem",
-        backgroundColor: "red",
+        backgroundColor: "#f5f5f5",
+        borderRadius: "1rem",
+        boxShadow: "0 0 5px 0 #000000",
       }}
     >
       <CardContent>
         <Typography variant="h5">{props.title}</Typography>
-        <Typography variant="body1">
-          {props.body || "This is the card body."}
-        </Typography>
+        <Typography variant="body1">{props.body}</Typography>
 
         <Container
           disableGutters
@@ -30,7 +32,12 @@ const Card: React.FC<CardProps> = (props) => {
             marginTop: "1rem",
           }}
         >
-          {props.button}
+          <MyButton
+            text="Read More"
+            url={props.url}
+            target="_blank"
+            rel="noreferrer noopener"
+          />
         </Container>
       </CardContent>
     </Container>
