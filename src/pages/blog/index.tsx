@@ -1,11 +1,10 @@
-import React from "react";
+import BlogList from "../../components/BlogList";
 
 function BlogPage() {
   return (
     <>
       <div>
-        <h1>Blog</h1>
-        <p>Posts will show up here later on.</p>
+        <BlogList />
       </div>
     </>
   );

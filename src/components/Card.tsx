@@ -1,4 +1,4 @@
-import { CardContent, Container, Typography } from "@mui/material";
+import { Card, CardContent, CardHeader, Divider, Typography } from "@mui/material";
 import React from "react";
 import MyButton from "./Button";
 
@@ -8,35 +8,33 @@ interface CardProps {
   url?: string;
 }
 
-const Card: React.FC<CardProps> = (props) => {
+const MyCard: React.FC<CardProps> = (props) => {
   return (
-    <Container
+    <Card
       sx={{
-        height: "fit-content",
-        width: "30rem",
-        margin: "1rem auto",
-        outline: "1px solid black",
+        minHeight: "14rem",
+        width: "60%",
+        margin: "1rem",
         padding: "1rem",
         backgroundColor: "#f5f5f5",
-        borderRadius: "1rem",
-        boxShadow: "0 0 5px 0 grey",
       }}
     >
+      <CardHeader title={props.title} />
+
       <CardContent>
-        <Typography variant="h5">{props.title}</Typography>
         <Typography variant="body1">{props.body}</Typography>
 
-        <Container
-          disableGutters
+        <Divider sx={{ margin: "1rem 0" }} />
+        <MyButton
           sx={{
             marginTop: "1rem",
           }}
-        >
-          <MyButton text="Read More" url={props.url} />
-        </Container>
+          text="Read More"
+          url={props.url}
+        />
       </CardContent>
-    </Container>
+    </Card>
   );
 };
 
-export default Card;
+export default MyCard;
