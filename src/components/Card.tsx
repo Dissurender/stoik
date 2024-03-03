@@ -12,9 +12,10 @@ const MyCard: React.FC<CardProps> = (props) => {
   return (
     <Card
       sx={{
-        minHeight: "14rem",
+        minHeight: "12rem",
         width: "60%",
-        margin: "1rem",
+        minWidth: "400px",
+        margin: "1rem auto",
         padding: "1rem",
         backgroundColor: "#f5f5f5",
       }}

@@ -15,7 +15,12 @@ const links = [
 
 function Footer() {
   return (
-    <Grid container direction="column" alignItems="center">
+    <Grid
+      container
+      padding={2}
+      direction="column"
+      alignItems="center"
+    >
       <Grid item xs={3}>
         <Typography style={{ textAlign: "center", margin: "0 0 1rem 0" }}>
           {new Date().getFullYear()} Diss

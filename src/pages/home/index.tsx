@@ -6,11 +6,15 @@ import MyButton from "../../components/Button";
 function HomePage() {
   return (
     <>
-      <Container maxWidth="md">
+      <Container sx={{
+        width: "100%",
+        margin: "1rem",
+        padding: "1rem",
+      }}>
         <Typography variant="h3">Welcome to the home page!</Typography>
         <Typography variant="body1">
           This is a simple example for my proxy API Medium-Roast. You can find
-          the source code for this project on my GitHub.
+          the source code for this project with the button below.
         </Typography>
         <MyButton
           size="large"

@@ -6,20 +6,24 @@ const pages = [
   {
     title: "Home",
     href: "/",
+    describedby: "home-link",
   },
   {
     title: "About",
     href: "/about",
+    describedby: "about-link",
   },
   {
     title: "Blog",
     href: "/blog",
+    describedby: "blog-link",
   },
   {
     title: "GitHub",
     href: "https://github.com/Dissurender/",
     rel: "noreferrer noopener",
     target: "_blank",
+    describedby: "github-link",
   },
 ];
 
@@ -39,6 +43,7 @@ function Nav() {
             }}
             target={page.target ? page.target : ""}
             rel={page.rel ? page.rel : ""}
+            aria-describedby={page.describedby}
           >
             {page.title}
           </Link>
