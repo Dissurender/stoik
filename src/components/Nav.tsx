@@ -29,7 +29,7 @@ const pages = [
 
 function Nav() {
   return (
-    <AppBar position="static">
+    <AppBar position="static" className="nav">
       <Toolbar disableGutters style={{ margin: "0 1rem" }}>
         {pages.map((page) => (
           <Link

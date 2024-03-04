@@ -37,6 +37,7 @@ const CardList = () => {
           margin: "0 auto",
         }}
         disableGutters
+        className="card-list-container"
       >
         {loading && <p>Loading...</p>}
         {error && <p>{error}</p>}

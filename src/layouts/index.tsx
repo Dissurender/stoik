@@ -13,6 +13,7 @@ const Layout = () => {
           width: "100vw",
           minHeight: "calc(100vh - 64px - 100px)",
         }}
+        className="main-content"
       >
         <Outlet />
       </Container>
